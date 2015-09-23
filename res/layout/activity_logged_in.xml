@@ -1,0 +1,119 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"    
+    tools:context=".LoggedInActivity"
+    android:background="#EBF4FA" >
+
+    <!-- THIS LAYOUT HOLDS THE DROPDOWN MENU AND SEARCH BUTTON -->
+
+    <LinearLayout
+        android:id="@+id/dropdown_Layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:layout_marginTop="0dp"
+        android:orientation="horizontal" >
+
+        <Spinner
+            android:id="@+id/profile_dropdown"
+            android:layout_width="208dp"
+            android:layout_height="50dp" />
+
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="Logout" 
+            style="@style/ButtonText"
+			android:background="@drawable/roundedbutton"
+			android:gravity="center_horizontal"
+			android:padding="8dp"/>
+    </LinearLayout>
+
+    <!-- THIS LAYOUT HOLDS THE PROFILE INFO OF CURRENT USER -->
+
+    <LinearLayout
+        android:id="@+id/profileInfo_Layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="55dp"
+        android:orientation="horizontal" >
+
+        <TextView
+	        android:id="@+id/profileView"
+	        android:layout_width="match_parent"
+	        android:layout_height="30dp"
+	        android:layout_marginLeft="10dp"
+	        android:textSize="18sp"
+	        android:layout_below="@+id/dropdown_Layout"
+	        android:text="profile" 
+	        android:textColor="#348017" 
+            android:textStyle="bold"/>
+        
+
+    </LinearLayout>
+
+    <!-- THIS SCROLL LAYOUT HOLDS THE LIST OF ONLINE FRIENDS 
+
+    <ScrollView
+        android:id="@+id/contacts_ScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:orientation="vertical" >   -->
+
+        <LinearLayout
+            android:id="@+id/contactList_Layout"
+            android:layout_width="match_parent"
+            android:layout_marginTop="80dp"
+            android:layout_height="wrap_content" 
+            android:paddingBottom="5dp"           
+            android:orientation="vertical" >
+	            <ListView
+		            android:id="@+id/friendView"
+		            android:layout_width="match_parent"
+		            android:layout_height="0dp"
+		            android:layout_weight="1" >
+	        	</ListView>
+	            
+        </LinearLayout>
+ <!--     </ScrollView>-->
+
+    <!-- THIS LAYOUT HOLDS THE OPTIONS FOR NAVIGATION, CHATS, CONTACTS, MORE OPTIONS -->
+	
+<!--  
+			<Button
+			    style="@style/ButtonText"
+			    android:background="@drawable/roundedbutton"
+			    android:gravity="center_horizontal"
+			    android:layout_marginLeft="10dp"
+			    android:padding="10dp"
+			    android:layout_width="wrap_content"
+			    android:layout_height="40dp"
+			    android:text="settings"			    
+			    android:textSize="15sp" />
+
+			<Button
+			    style="@style/ButtonText"
+			    android:layout_width="wrap_content"
+			    android:layout_height="40dp"
+			    android:background="@drawable/roundedbutton"
+			    android:gravity="center_horizontal"
+			    android:layout_marginLeft="10dp"
+			    android:padding="8dp"
+			    android:text="settings"
+			    android:textSize="15sp" />
+
+				<Button
+				    style="@style/ButtonText"
+				    android:background="@drawable/roundedbutton"
+				    android:gravity="center_horizontal"
+				    android:layout_marginLeft="10dp"
+				    android:padding="8dp"
+				    android:layout_width="wrap_content"
+				    android:layout_height="40dp"
+				    android:text="settings"
+				    android:textSize="15sp" /> -->
+	 
+</RelativeLayout>
